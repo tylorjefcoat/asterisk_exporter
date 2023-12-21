@@ -32,14 +32,14 @@ var (
 	enablePromHttpMetrics = kingpin.Flag("web.enable-promhttp-metrics", "Include metrics about the http server itself (promhttp_*)").Default("true").Bool()
 	maxRequests           = kingpin.Flag("web.max-requests", "Maximum number of parallel scrape requests. Use 0 to disable.").Default("40").Int()
 
-	enableAgentsCollector     = kingpin.Flag("collector.agents", "Enable agents collector").Default("true").Bool()
+	enableAgentsCollector     = kingpin.Flag("collector.agents", "Enable agents collector").Default("false").Bool()
 	enableCoreCollector       = kingpin.Flag("collector.core", "Enable core collector").Default("true").Bool()
 	enableSipCollector        = kingpin.Flag("collector.sip", "Enable sip collector").Default("true").Bool()
 	enableBridgeCollector     = kingpin.Flag("collector.bridges", "Enable bridge collector").Default("false").Bool()
 	enableCalendarCollector   = kingpin.Flag("collector.calendars", "Enable calendar collector").Default("false").Bool()
 	enableConfbridgeCollector = kingpin.Flag("collector.confbridges", "Enable confbridge collector").Default("false").Bool()
 	enableIax2Collector       = kingpin.Flag("collector.iax2", "Enable iax2 collector").Default("false").Bool()
-	enableModuleCollector     = kingpin.Flag("collector.modules", "Enable module collector").Default("false").Bool()
+	enableModuleCollector     = kingpin.Flag("collector.modules", "Enable module collector").Default("true").Bool()
 )
 
 func main() {
